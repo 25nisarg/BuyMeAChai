@@ -33,11 +33,10 @@ const Navbar = () => {
           <button onClick={()=>{setshowDropdown(!showDropdown)}} onBlur={()=>{setTimeout(()=>{
             setshowDropdown(false)
           },300)}} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="inline-flex items-center justify-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 me-2 mb-2" type="button">
-            Welcome {session.user.name}
+            Welcome {session.user.email}
             <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7" /></svg>
           </button>
-
-          <div id="dropdown" className={`z-10 ${showDropdown?" ":"hidden"} absolute left-2.5 bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44`}>
+          <div id="dropdown" className={`z-10 ${showDropdown?" ":"hidden"} absolute left-2.5 bg-neutral-primary-medium bg-white text-black border border-default-medium rounded-base shadow-lg w-44`}>
             <ul className="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
               <li>
                 <Link href="/dashboard" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</Link>
